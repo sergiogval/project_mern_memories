@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles';
@@ -15,7 +15,6 @@ const Auth = () => {
   const handleChange = () => {
 
   };
-
 
   return (
     <Container component="main" maxWidth="xs">
@@ -39,12 +38,10 @@ const Auth = () => {
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             {isSignUp ? 'Sign Up' : 'Sign In'}
           </Button>
-
-
         </form>
       </Paper>
     </Container>
-  )
+  );
 };
 
-export default Auth
+export default Auth;
