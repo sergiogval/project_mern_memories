@@ -13,7 +13,7 @@ import Input from './Input';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
-const SignUp = () => {
+const Signup = () => {
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
@@ -31,7 +31,6 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (isSignup) {
       dispatch(signup(form, history));
     } else {
@@ -80,7 +79,7 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
           <GoogleLogin
-            clientId="CLIENT_ID"
+            clientId="259437554733-kftffalr54gjnvc9vi49sdq0on87nhkt.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -90,7 +89,7 @@ const SignUp = () => {
             onFailure={googleError}
             cookiePolicy="single_host_origin"
           />
-          <Grid container justify="flex-end">
+          <Grid container justifyContent="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
                 { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
@@ -103,4 +102,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;
